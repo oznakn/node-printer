@@ -21,11 +21,14 @@ namespace{
     /** Memory value class management to avoid memory leak
     */
     template<typename Type>
-    class MemValue: public MemValueBase<Type> {
+    class MemValue{
     public:
-        /** Constructor of allocating iSizeKbytes bytes memory;
-        * @param iSizeKbytes size in bytes of required allocating memory
-        */
+        MemValue(): _value(NULL) {}
+
+        Type * get() {return _value; }
+        Type * operator ->() { return &_value; }
+        operator bool() const { return (_value != NULL); }
+
         MemValue(const DWORD iSizeKbytes) {
             _value = (Type*)malloc(iSizeKbytes);
         }
@@ -33,7 +36,10 @@ namespace{
         ~MemValue () {
             free();
         }
+
     protected:
+        Type *_value;
+
         virtual void free() {
             if(_value != NULL)
             {
