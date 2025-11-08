@@ -1,8 +1,8 @@
 {
-  "name": "@iamtomcat/printer",
+  "name": "@oznakn/printer",
   "description": "Node.js printer bindings",
-  "version": "0.7.0",
-  "homepage": "https://github.com/iamtomcat/node-printer",
+  "version": "0.1.0",
+  "homepage": "https://github.com/oznakn/node-printer",
   "main": "./printer.js",
   "types": "./index.d.ts",
   "exports": {
@@ -41,7 +41,7 @@
   "binary": {
     "module_name": "node_printer",
     "module_path": "./lib/",
-    "host": "https://github.com/tojocky/node-printer/releases/download/",
+    "host": "https://github.com/oznakn/node-printer/releases/download/",
     "remote_path": "v{version}"
   },
   "licenses": [
@@ -59,6 +59,6 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/iamtomcat/node-printer.git"
+    "url": "https://github.com/oznakn/node-printer.git"
   }
 }
